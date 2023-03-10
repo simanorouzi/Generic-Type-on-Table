@@ -20,23 +20,19 @@ export default function App() {
     { name: 'name6', userid: 'un6', id: 'i6' },
   ];
 
-  const selectListHandler = (item) => {
-    console.log(item);
-  };
-
   return (
     <div>
       <ListView
         rows={foods}
         onSelect={(item) => {
-          console.log(item.title);
+          item.id;
         }}
       />
       ;
       <ListView
         rows={users}
         onSelect={(item) => {
-          console.log(item.name);
+          item.id;
         }}
       />
       ;
