@@ -9,8 +9,9 @@ import ListItem from './listItem';
 
 
 export type tableType<T>={
-  rows:T[],
-  onSelect:(item:T)=>void
+  rows: T[],
+  columns: string[];
+  onSelect: (item: T) => void
 }
 
 

@@ -2,7 +2,7 @@ import * as React from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 
-const ListItem = (props: { title: string; id: string }) => {
+function ListItem<T extends { id: string; title: string }>(props: T) {
   const [selectedRow, setSelectedRow] = React.useState<boolean>(false);
 
   const onSelectHandler = (id: string) => {
@@ -22,6 +22,6 @@ const ListItem = (props: { title: string; id: string }) => {
       </TableCell>
     </TableRow>
   );
-};
+}
 
 export default ListItem;
